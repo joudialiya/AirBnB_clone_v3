@@ -8,5 +8,5 @@ from api.v1.views import app_view
 def status_handler():
     """returns status"""
     return {
-        "status": "ok"
+        "status": "OK"
     }
