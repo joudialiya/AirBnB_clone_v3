@@ -12,7 +12,7 @@ app.register_blueprint(app_view)
 
 
 if __name__ == "__main__":
-    HOST = "HBNB_API_HOST" if getenv("HBNB_API_HOST") else "0.0.0.0"
-    PORT = "HBNB_API_PORT" if getenv("HBNB_API_PORT") else "5000"
+    HOST = getenv("HBNB_API_HOST") if getenv("HBNB_API_HOST") else "0.0.0.0"
+    PORT = getenv("HBNB_API_PORT") if getenv("HBNB_API_PORT") else "5000"
 
     app.run(host=HOST, port=PORT, threaded=True)
